@@ -12,7 +12,7 @@ const cancelBooking = require('./routes/cancelBooking');
 const updateBooking = require('./routes/updateStatus');
 const undoStatus = require('./routes/undoStatus');
 
-app.use(cors({ origin: ['http://localhost:3000'] }))
+app.use(cors({ origin: ['http://localhost:3000', 'https://divine-touch-client.onrender.com'] }))
 app.use(express.json());
 
 app.use('/login', login);
