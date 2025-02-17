@@ -3,6 +3,7 @@ const app = express();
 require('dotenv').config();
 const mongoose = require('mongoose');
 const cors = require('cors');
+const { cronJob } = require('./utilities/utilities');
 
 const login = require('./routes/login');
 const verifyToken = require('./routes/verifyToken');
@@ -30,6 +31,7 @@ app.listen('8000', (err) => {
     if (err){
         console.log(err.message);
     }
+    cronJob();
     console.log('server  is running on port 8000');
 })
 
